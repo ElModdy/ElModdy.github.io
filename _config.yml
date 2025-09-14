@@ -1,0 +1,46 @@
+# ----------------------------------------
+# Basic Site Info
+# ----------------------------------------
+title: "My Personal Website"
+description: "A minimal, console-style site with math support"
+url: "https://ElModdy.github.io" # replace with your GitHub Pages URL
+baseurl: ""                     # leave empty for user pages
+
+author:
+  name: "Davide Modesto"
+  github: "ElModdy"
+
+# ----------------------------------------
+# Theme
+# ----------------------------------------
+remote_theme: b2a3e8/jekyll-theme-console
+
+# ----------------------------------------
+# Markdown + Math
+# ----------------------------------------
+markdown: kramdown
+kramdown:
+  math_engine: mathjax   # Use MathJax for $...$ and $$...$$
+  input: GFM
+  syntax_highlighter: rouge
+
+# ----------------------------------------
+# Plugins
+# ----------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# ----------------------------------------
+# Optional: Pagination
+# ----------------------------------------
+paginate: 5
+paginate_path: "/page:num/"
+
+# ----------------------------------------
+# Custom Head Scripts
+# ----------------------------------------
+# MathJax CDN (for rendering math)
+head_custom:
+  - "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
