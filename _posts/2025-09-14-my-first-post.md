@@ -18,7 +18,7 @@ Now to the actual numbers (remember: **lower = better**):
 * **Me**: 8,092
 * **GPT-5-pro**: 24,913
 <br>
-So yes, I actually did beat GPT-5-pro. I ended up in **32nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.
+So yes, I actually did beat GPT-5-pro. I ended up in **38nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.
 
 ## Mathematical Framework
 Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \{0,1\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br><br>
