@@ -12,15 +12,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Problem This challenge is inspired by the Berghain Challenge, originally promoted by Listen Lab. In it, you play the role of a nightclub bouncer tasked with filling 1,000 spots while satisfying strict demographic constraints—like ensuring at least 40% Berlin locals, 80% wearing black, and so on. The twist? Guests arrive one by one, and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible." />
 <meta property="og:description" content="The Problem This challenge is inspired by the Berghain Challenge, originally promoted by Listen Lab. In it, you play the role of a nightclub bouncer tasked with filling 1,000 spots while satisfying strict demographic constraints—like ensuring at least 40% Berlin locals, 80% wearing black, and so on. The twist? Guests arrive one by one, and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible." />
-<link rel="canonical" href="http://localhost:4000/my-first-post/" />
-<meta property="og:url" content="http://localhost:4000/my-first-post/" />
+<link rel="canonical" href="http://localhost:4000/berghain-challenge/" />
+<meta property="og:url" content="http://localhost:4000/berghain-challenge/" />
 <meta property="og:site_name" content="ElModdy" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-09-15T00:00:00+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Berghain Challenge" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-15T00:00:00+02:00","datePublished":"2025-09-15T00:00:00+02:00","description":"The Problem This challenge is inspired by the Berghain Challenge, originally promoted by Listen Lab. In it, you play the role of a nightclub bouncer tasked with filling 1,000 spots while satisfying strict demographic constraints—like ensuring at least 40% Berlin locals, 80% wearing black, and so on. The twist? Guests arrive one by one, and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible.","headline":"Berghain Challenge","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/my-first-post/"},"url":"http://localhost:4000/my-first-post/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-15T00:00:00+02:00","datePublished":"2025-09-15T00:00:00+02:00","description":"The Problem This challenge is inspired by the Berghain Challenge, originally promoted by Listen Lab. In it, you play the role of a nightclub bouncer tasked with filling 1,000 spots while satisfying strict demographic constraints—like ensuring at least 40% Berlin locals, 80% wearing black, and so on. The twist? Guests arrive one by one, and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible.","headline":"Berghain Challenge","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/berghain-challenge/"},"url":"http://localhost:4000/berghain-challenge/"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ElModdy" /><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="/assets/js/mathjax-config.js"></script>
@@ -54,9 +54,10 @@ Now to the actual numbers (remember: <strong>lower = better</strong>):
   <li><strong>1st place</strong>: 7,609</li>
   <li><strong>Me</strong>: 8,092</li>
   <li><strong>GPT-5-pro</strong>: 24,913
-<br />
-So yes, I actually did beat GPT-5-pro. I ended up in <strong>38nd place</strong>, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.</li>
+<br /></li>
 </ul>
+
+<p>So yes, I actually did beat GPT-5-pro. I ended up in <strong>38nd place</strong>, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.</p>
 
 <h2 id="mathematical-framework">Mathematical Framework</h2>
 <p>Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \{0,1\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br /><br />
@@ -115,7 +116,7 @@ For each integer $k\ge1$,
 \end{aligned}\]
 
 <h2 id="implementation">Implementation</h2>
-<p>Here’s the GitHub link 🙃 <a href="https://github.com/ElModdy/listenlab-challenge">GitHub Repository</a>
+<p>Here’s the GitHub link 🙃 <a href="https://github.com/ElModdy/listenlab-challenge">GitHub Repository</a>.
 Honestly, an AI could probably fill in the implementation from this post, minor tweaks aside, it’s all there.</p>
 
 <p>For some extra luck running multiple simulations, I ended up using <strong>GitHub Actions</strong>: free, fast, and surprisingly perfect for the job.</p>

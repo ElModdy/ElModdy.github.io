@@ -18,6 +18,7 @@ Now to the actual numbers (remember: **lower = better**):
 * **Me**: 8,092
 * **GPT-5-pro**: 24,913
 <br>
+
 So yes, I actually did beat GPT-5-pro. I ended up in **38nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.
 
 ## Mathematical Framework
@@ -81,7 +82,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 ## Implementation
-Here’s the GitHub link 🙃 [GitHub Repository](https://github.com/ElModdy/listenlab-challenge)
+Here’s the GitHub link 🙃 [GitHub Repository](https://github.com/ElModdy/listenlab-challenge).
 Honestly, an AI could probably fill in the implementation from this post, minor tweaks aside, it’s all there.
 
 For some extra luck running multiple simulations, I ended up using **GitHub Actions**: free, fast, and surprisingly perfect for the job.
