@@ -21,11 +21,11 @@ Now to the actual numbers (remember: **lower = better**):
 So yes, I actually did beat GPT-5-pro. I ended up in **38nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.
 
 ## Mathematical Framework
-Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \{0,1\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br><br>
+Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \\{0,1\\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br><br>
 The challenge provides marginal probabilities and pairwise correlations, but this information doesn't uniquely determine the joint distribution for $|F| > 2$. To resolve this, I estimated an empirical distribution $\mu_{\text{init}}$ from initial gameplay, then solved an optimization problem minimizing KL divergence from $\mu_{\text{init}}$ subject to the given marginal and correlation constraints.
 
 ## Decision Policy
-Our strategy is a stochastic policy $a: \{0,1\}^{|F|} \rightarrow [0,1]$, where $a(x)$ represents the probability of accepting a candidate with feature vector $x$. For the $n$-th candidate with features $X_n = x$, our decision $A_n \in \{0,1\}$ satisfies:
+Our strategy is a stochastic policy $a:\\{0,1\\}^{|F|} \rightarrow [0,1]$, where $a(x)$ represents the probability of accepting a candidate with feature vector $x$. For the $n$-th candidate with features $X_n = x$, our decision $A_n \in \\{0,1\\}$ satisfies:
 $$\Pr(A_n = 1 | X_n = x) = a(x)$$
 
 ## The Core Optimization Problem

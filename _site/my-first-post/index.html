@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>
-    Mario
+    Davide Modesto
     </title><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Berghain Challenge" />
@@ -24,7 +24,7 @@
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ElModdy" /><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="/assets/js/mathjax-config.js"></script>
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.css" integrity="sha384-OH8qNTHoMMVNVcKdKewlipV4SErXqccxxlg6HC9Cwjr5oZu2AdBej1TndeCirael" crossorigin="anonymous">
@@ -55,15 +55,15 @@ Now to the actual numbers (remember: <strong>lower = better</strong>):
   <li><strong>Me</strong>: 8,092</li>
   <li><strong>GPT-5-pro</strong>: 24,913
 <br />
-So yes, I actually did beat GPT-5-pro. I ended up in <strong>32nd place</strong>, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.</li>
+So yes, I actually did beat GPT-5-pro. I ended up in <strong>38nd place</strong>, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.</li>
 </ul>
 
 <h2 id="mathematical-framework">Mathematical Framework</h2>
-<p>Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in {0,1}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br /><br />
+<p>Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \{0,1\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br /><br />
 The challenge provides marginal probabilities and pairwise correlations, but this information doesn’t uniquely determine the joint distribution for $|F| &gt; 2$. To resolve this, I estimated an empirical distribution $\mu_{\text{init}}$ from initial gameplay, then solved an optimization problem minimizing KL divergence from $\mu_{\text{init}}$ subject to the given marginal and correlation constraints.</p>
 
 <h2 id="decision-policy">Decision Policy</h2>
-<p>Our strategy is a stochastic policy $a: {0,1}^{|F|} \rightarrow [0,1]$, where $a(x)$ represents the probability of accepting a candidate with feature vector $x$. For the $n$-th candidate with features $X_n = x$, our decision $A_n \in {0,1}$ satisfies:
+<p>Our strategy is a stochastic policy $a:\{0,1\}^{|F|} \rightarrow [0,1]$, where $a(x)$ represents the probability of accepting a candidate with feature vector $x$. For the $n$-th candidate with features $X_n = x$, our decision $A_n \in \{0,1\}$ satisfies:
 \(\Pr(A_n = 1 | X_n = x) = a(x)\)</p>
 
 <h2 id="the-core-optimization-problem">The Core Optimization Problem</h2>
