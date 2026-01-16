@@ -4,22 +4,22 @@ date: 2025-09-15
 ---
 
 ## The Problem
-This challenge is inspired by the [Berghain Challenge](https://berghain.challenges.listenlabs.ai/), originally promoted by [Listen Lab](https://www.linkedin.com/company/listenlabss/about/). In it, you play the role of a nightclub bouncer tasked with filling 1,000 spots while satisfying strict demographic constraints—like ensuring at least 40% Berlin locals, 80% wearing black, and so on.<br><br>
-The twist? Guests arrive one by one, and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible.
+This challenge is inspired by the [Berghain Challenge](https://berghain.challenges.listenlabs.ai/), originally promoted by [Listen Lab](https://www.linkedin.com/company/listenlabss/about/). In it, you play the role of a nightclub bouncer tasked with filling 1000 spots while satisfying strict demographic constraints like ensuring at least 40% Berlin locals, 80% wearing black, and so on.<br><br>
+Guests arrive one by one and you must make immediate accept or reject decisions with no second chances. Your goal is to meet all constraints while rejecting as few people as possible.
 
 ## Results
-I first enrolled as “Davide Modesto,” but realized that being scarce on [LinkedIn](https://www.linkedin.com/in/davide-m-561915128) and [Instagram](https://www.instagram.com/davidemodesto_/) meant nobody would contact me. With only 25 characters for a name, I combined the reason people might reach me and an email into:
+With only 25 characters for a name, I combined the reason people might reach me and an email into:
 **`looking4job.orphd@gmx.at`**.<br>
 Regretted it immediately, but too late.
 <br>
-Now to the actual numbers (remember: **lower = better**):
+Now to the actual numbers (**lower = better**):
 <br>
 * **1st place**: 7,609
 * **Me**: 8,092
 * **GPT-5-pro**: 24,913
 <br>
 
-So yes, I actually did beat GPT-5-pro. I ended up in **38nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no machine-learning machinery in sight.
+I ended up in **38nd place**, and I’m genuinely proud of that, especially because my approach was just a minimal, lightweight algorithm that can run on a laptop, with no heavy RL.
 
 ## Mathematical Framework
 Let $F$ be the set of binary features we care about (e.g. {local/tourist, black outfit/other, young/old}). Each candidate is represented as a binary feature vector $X_n \in \\{0,1\\}^{|F|}$, where each coordinate represents presence or absence of a feature. These candidates arrive i.i.d. from some unknown distribution $\mu$.<br><br>
@@ -85,4 +85,4 @@ $$\begin{aligned}
 Here’s the GitHub link 🙃 [GitHub Repository](https://github.com/ElModdy/listenlab-challenge).
 Honestly, an AI could probably fill in the implementation from this post, minor tweaks aside, it’s all there.
 
-For some extra luck running multiple simulations, I ended up using **GitHub Actions**: free, fast, and surprisingly perfect for the job.
+For some extra luck running multiple simulations, I ended up using **GitHub Actions**.
