@@ -7,8 +7,8 @@ layout: default
   <div style="padding-right: 2em; flex: 1;">
     <p style="margin-bottom: 1.5em;">Master's student in Mathematics.</p>
     <p style="line-height: 1.8;">
-      Email: modesto.davide[at]gmail.com<br>
-      GitHub: <a href="https://github.com/ElModdy">ElModdy</a><br>
+      <strong>Email:</strong> modesto.davide[at]gmail.com<br>
+      <strong>GitHub:</strong> <a href="https://github.com/ElModdy">ElModdy</a><br>
       You can find my <a href="/assets/my_cv.pdf">Curriculum Vitae</a> here.
     </p>
   </div>
